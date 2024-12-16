@@ -227,7 +227,7 @@ nav .container-fluid .nav-link:hover{
 
 /* Our team */
 
-.our-team{
+.our-team {
   background-image: url("../img/hero_image_with_gradient.png");
   background-position: center;
   background-size: cover;
@@ -235,79 +235,102 @@ nav .container-fluid .nav-link:hover{
   min-height: 100vh;
 }
 
-
-
 .our-team .card {
   display: flex;
+  flex-direction: column; /* Kart içeriği dikey hizalandı */
   align-items: center;
   background-color: white;
   border-radius: 10px;
-  padding: 15px;
-  /* box-shadow: 4px rgba(0, 0, 0, 0.1); */
+  padding: 20px; /* Daha fazla padding ile içerik alanı genişletildi */
   border: 2px solid red;
-  max-width: 350px;
+  max-width: 600px; /* Kart genişliği artırıldı */
+  width: 100%; /* Kartların genişliği esnek hale getirildi */
 }
 
 .our-team .card-image {
   flex-shrink: 0;
+  width: 100%; /* Kart genişliğine uyum sağlandı */
+  border-radius: 10px; /* Kart kenarlarıyla uyumlu köşeler */
+  overflow: hidden; /* Taşmalar engellendi */
 }
 
 .our-team .card-image img {
-  border-radius: 50%;
-  width: 110px;
-  height: 110px;
-  object-fit: cover;
-  border: 3px solid #4b699d;
+  width: 100%;
+  height: 350px; /* Resim yüksekliği artırıldı */
+  object-fit: cover; /* Resim, kart alanını dolduracak şekilde ayarlandı */
+  border: none; /* Resim kenarındaki border kaldırıldı */
 }
 
 .our-team .card-content {
-  margin-left: 15px;
+  margin-top: 20px; /* Görsel ile içerik arasına mesafe eklendi */
+  text-align: center; /* İçerik merkezlendi */
 }
 
 .our-team .card-content h2 {
-  font-size: 18px;
+  font-size: 24px; /* Başlık yazı boyutu artırıldı */
   margin: 0;
   color: black;
 }
 
 .our-team .card-content p {
-  font-size: 14px;
+  font-size: 18px; /* Açıklama yazısı boyutu artırıldı */
   color: gray;
-  margin: 5px 0 0;
+  margin: 10px 0 0;
 }
 
 
-/* ! Commitees */
+/* ! Committees */
 
-.commitees{
+.commitees {
   background-image: url("../img/hero_image_with_gradient.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
+  padding: 20px 0;
 }
-
 
 .commitees .container .row {
   text-align: center;
 }
 
+.commitees .custom-card {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
 
-.custom-button {
-  background-color: #1c2c42; /* Koyu mavi arka plan ve saydamlık */
+.commitees .custom-card:hover {
+  transform: translateY(-10px);
+}
+
+.commitees .card-image {
+  width: 100%;
+  /* height: 200px; */
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.commitees .custom-button {
+  background-color: #1c2c42; /* Dark blue background */
   color: white !important;
-  border: 2px solid red; /* Kırmızı border */
+  border: 2px solid red; /* Red border */
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
   text-align: center;
   display: inline-block;
   transition: background-color 0.3s ease;
-  width: 30%;
-  margin-bottom: 30px;
+  width: 100%;
+  border-radius: 0;
 }
 
-.custom-button:hover {
-  background-color: rgba(0, 0, 139, 1); /* Hover'da tam mavi renk */
+.commitees .custom-button:hover {
+  background-color: rgba(0, 0, 139, 1); /* Bright blue on hover */
 }
+
+
